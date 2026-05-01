@@ -63,7 +63,7 @@ function Index() {
           <div className="mt-10" id="waitlist">
             <WaitlistForm />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Problem */}
