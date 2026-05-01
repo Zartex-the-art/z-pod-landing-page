@@ -29,10 +29,10 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Z-Pod — Private AI That Remembers You" },
-      { name: "description", content: "Z-Pod is a private AI device that remembers your context, works offline, and stays with you across all your devices. By Zartex." },
+      { title: "zpod — Private AI That Remembers You" },
+      { name: "description", content: "zpod is a private AI device that remembers your context, works offline, and stays with you across all your devices. By Zartex." },
       { name: "author", content: "Zartex" },
-      { property: "og:title", content: "Z-Pod — Private AI That Remembers You" },
+      { property: "og:title", content: "zpod — Private AI That Remembers You" },
       { property: "og:description", content: "A private AI that remembers your context, works offline, and stays with you across all your devices." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
