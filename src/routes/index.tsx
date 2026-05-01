@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import zpodDevice from "@/assets/zpod-device.png";
+import { FloatingDevice } from "@/components/FloatingDevice";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -36,6 +36,8 @@ const useCases = [
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <FloatingDevice />
+
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/50">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -50,24 +52,15 @@ function Index() {
       </nav>
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 pt-16">
+      <section className="relative min-h-screen flex items-center px-6 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-glow/5 blur-[120px]" />
+          <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-glow/5 blur-[120px]" />
         </div>
-        <div className="relative text-center max-w-3xl animate-[fadeInUp_0.8s_ease-out_both]">
-          <div className="mb-10 flex justify-center">
-            <img
-              src={zpodDevice}
-              alt="zpod device — a compact AI hub"
-              width={280}
-              height={280}
-              className="drop-shadow-[0_20px_60px_rgba(100,160,255,0.15)]"
-            />
-          </div>
+        <div className="relative max-w-2xl lg:max-w-xl animate-[fadeInUp_0.8s_ease-out_both] ml-[8%] lg:ml-[10%]">
           <h1 className="text-5xl sm:text-7xl font-bold tracking-tight leading-[1.05]">
             Stop repeating yourself to AI
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
             zpod is a private AI that remembers your context, works offline, and stays with you across all your devices.
           </p>
           <div className="mt-10" id="waitlist">
@@ -78,12 +71,12 @@ function Index() {
 
       {/* Problem */}
       <section className="py-32 px-6">
-        <motion.div className="max-w-3xl mx-auto text-center" {...fade}>
+        <motion.div className="max-w-3xl lg:max-w-2xl lg:mr-auto lg:ml-[10%] text-center lg:text-left" {...fade}>
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">The Problem</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             AI today has no memory
           </h2>
-          <p className="mt-6 text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
             Every conversation starts from zero. You repeat your preferences, re-explain your projects, 
             and lose context the moment you close a tab. Current AI depends on the cloud, exposes your data, 
             and forgets everything about you.
@@ -93,12 +86,12 @@ function Index() {
 
       {/* Solution */}
       <section className="py-32 px-6 bg-surface/50">
-        <motion.div className="max-w-3xl mx-auto text-center" {...fade}>
+        <motion.div className="max-w-3xl lg:max-w-2xl lg:mr-auto lg:ml-[10%] text-center lg:text-left" {...fade}>
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">The Solution</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             AI that truly knows you
           </h2>
-          <p className="mt-6 text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
             zpod provides continuous memory that persists across sessions, complete privacy with on-device processing, 
             and offline intelligence that doesn't depend on the cloud. Your AI companion, always up to speed.
           </p>
@@ -107,9 +100,9 @@ function Index() {
 
       {/* Features */}
       <section className="py-32 px-6">
-        <motion.div className="max-w-5xl mx-auto" {...fade}>
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 text-center">Features</p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-16">
+        <motion.div className="max-w-5xl lg:max-w-3xl lg:mr-auto lg:ml-[10%]" {...fade}>
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 text-center lg:text-left">Features</p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-center lg:text-left mb-16">
             Built for the future of AI
           </h2>
           <div className="grid sm:grid-cols-2 gap-6">
@@ -132,9 +125,9 @@ function Index() {
 
       {/* Use Cases */}
       <section className="py-32 px-6 bg-surface/50">
-        <motion.div className="max-w-5xl mx-auto" {...fade}>
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 text-center">Use Cases</p>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-16">
+        <motion.div className="max-w-5xl lg:max-w-3xl lg:mr-auto lg:ml-[10%]" {...fade}>
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 text-center lg:text-left">Use Cases</p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-center lg:text-left mb-16">
             For everyone who thinks
           </h2>
           <div className="grid sm:grid-cols-3 gap-6">
@@ -157,7 +150,7 @@ function Index() {
 
       {/* Final CTA */}
       <section className="py-32 px-6">
-        <motion.div className="max-w-2xl mx-auto text-center" {...fade}>
+        <motion.div className="max-w-2xl lg:mr-auto lg:ml-[10%] text-center lg:text-left" {...fade}>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">
             Your AI should know you
           </h2>
