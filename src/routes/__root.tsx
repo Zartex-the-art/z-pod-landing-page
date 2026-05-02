@@ -29,13 +29,17 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "zpod — Private AI That Remembers You" },
+      { title: "zpod - Private AI That Remembers You" },
       { name: "description", content: "zpod is a private AI device that remembers your context, works offline, and stays with you across all your devices. By Zartex." },
       { name: "author", content: "Zartex" },
-      { property: "og:title", content: "zpod — Private AI That Remembers You" },
-      { property: "og:description", content: "A private AI that remembers your context, works offline, and stays with you across all your devices." },
+      { property: "og:title", content: "zpod - Private AI That Remembers You" },
+      { property: "og:description", content: "zpod is a private AI device that remembers your context, works offline, and stays with you across all your devices. By Zartex." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "zpod - Private AI That Remembers You" },
+      { name: "twitter:description", content: "zpod is a private AI device that remembers your context, works offline, and stays with you across all your devices. By Zartex." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Oj7kJfWjVhbBdHtOVoM7ERybHt92/social-images/social-1777684823697-my-notion-face-portrait.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Oj7kJfWjVhbBdHtOVoM7ERybHt92/social-images/social-1777684823697-my-notion-face-portrait.webp" },
     ],
     links: [
       {
