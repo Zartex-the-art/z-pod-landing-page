@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion } from "framer-motion";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { FloatingDevice } from "@/components/FloatingDevice";
 
@@ -12,13 +11,6 @@ export const Route = createFileRoute("/")({
     ],
   }),
 });
-
-const fade = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-50px" } as const,
-  transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const },
-};
 
 const features = [
   { title: "Persistent Memory", desc: "Your AI accumulates context over time — never starts from scratch." },
@@ -74,7 +66,7 @@ function Index() {
 
       {/* Problem */}
       <section className="py-32 px-6">
-        <motion.div className="max-w-3xl mx-auto text-center" {...fade}>
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">The Problem</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             AI today has no memory
@@ -84,12 +76,12 @@ function Index() {
             and lose context the moment you close a tab. Current AI depends on the cloud, exposes your data, 
             and forgets everything about you.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Solution */}
       <section className="py-32 px-6 bg-surface/50">
-        <motion.div className="max-w-3xl mx-auto text-center" {...fade}>
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">The Solution</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             AI that truly knows you
@@ -98,62 +90,54 @@ function Index() {
             zpod provides continuous memory that persists across sessions, complete privacy with on-device processing, 
             and offline intelligence that doesn't depend on the cloud. Your AI companion, always up to speed.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       {/* Features */}
       <section className="py-32 px-6">
-        <motion.div className="max-w-5xl mx-auto" {...fade}>
+        <div className="max-w-5xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 text-center">Features</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-16">
             Built for the future of AI
           </h2>
           <div className="grid sm:grid-cols-2 gap-6">
-            {features.map((f, i) => (
-              <motion.div
+            {features.map((f) => (
+              <div
                 key={f.title}
                 className="p-8 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <h3 className="text-lg font-semibold tracking-tight">{f.title}</h3>
                 <p className="mt-2 text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Use Cases */}
       <section className="py-32 px-6 bg-surface/50">
-        <motion.div className="max-w-5xl mx-auto" {...fade}>
+        <div className="max-w-5xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 text-center">Use Cases</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-center mb-16">
             For everyone who thinks
           </h2>
           <div className="grid sm:grid-cols-3 gap-6">
-            {useCases.map((u, i) => (
-              <motion.div
+            {useCases.map((u) => (
+              <div
                 key={u.title}
                 className="p-8 rounded-2xl border border-border/50 bg-card/50 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <h3 className="text-lg font-semibold tracking-tight">{u.title}</h3>
                 <p className="mt-2 text-muted-foreground text-sm leading-relaxed">{u.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Final CTA */}
       <section className="py-32 px-6">
-        <motion.div className="max-w-2xl mx-auto text-center" {...fade}>
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">
             Your AI should know you
           </h2>
@@ -163,7 +147,7 @@ function Index() {
           <div className="mt-10">
             <WaitlistForm />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Footer */}
