@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { motion } from "framer-motion";
+import { ClientOnly } from "@tanstack/react-router";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { FloatingDevice } from "@/components/FloatingDevice";
 
